@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagha Cleaners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('Anagha Images/11.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            color: white;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .promotion-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .promotion-item {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .promotion-item img {
+            width: 100%; /* Responsive full-width images */
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .promotion-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .promotion-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgba(19, 18, 18, 0.788);
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Show ellipsis for long text */
+            width: 100%; /* Ensure text spans full width */
+        }
+
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 80vh;
+            height: auto;
+        }
+
+        .close-btn {
+            position: relative;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+        footer p{
+            height: 50px;
+            color: white;
+            text-align: center;
+            padding: 4%;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .promotion-item {
+                width: 30%; /* Adjust to 3 columns on larger screens */
+            }
+
+            .promotion-item p {
+                font-size: 18px; /* Larger font for desktop */
+                white-space: normal; /* Allow text to wrap normally on larger screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .promotion-container {
+                display: block; /* Stack items vertically on mobile */
+            }
+
+            .promotion-item {
+                width: 100%; /* Ensure full-width items on mobile */
+                margin-bottom: 20px;
+            }
+
+            .promotion-item img {
+                width: 90%; /* Ensure images take up full width on mobile */
+            }
+
+            .promotion-item p {
+                font-size: 14px; /* Reduce font size for mobile */
+                white-space: normal; /* Allow text to wrap on mobile */
+            }
+        }
+
+        /* Scrolling Text */
+        .scrolling-text {
+            width: 100%;
+            /* overflow: hidden; */
+            white-space: nowrap;
+            box-sizing: border-box;
+            animation: marquee 6s linear infinite;
+            font-size: 1em;
+            padding: 10px;
+            color: white;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+    <header>
+        <h1>Anagha Cleaners</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to Anagha Cleaners</h2>
+            <div class="scrolling-text">
+                <h1>Your one-stop solution for eco-friendly, sustainable cleaning needs.</h1>
+            </div>
+        </section>
+
+        <section id="promotion-section">
+            <h1><b>Why Choose Anagha Cleaners?</b></h1>
+            <div class="promotion-container">
+                <div class="promotion-item">
+                    <img src="Anagha Images/Benefit 1.png" alt="Toxic Chemicals in Regular Cleaners" onclick="openModal(this)">
+                    <p><b>Did You Know?</b> <strong>Regular cleaners release harmful VOCs like ammonia and sulfur that stay in your home, causing skin and lung issues.</strong></p>
+                </div>
+                <div class="promotion-item">
+                    <img src="Anagha Images/Benefit 2.png" alt="Eco-friendly Ingredients" onclick="openModal(this)">
+                    <p><b>Eco-Friendly Solution:</b> <strong>Anagha Cleaners are made from citric peel extract, neem, and coconut surfactants. No toxic chemicals—just nature at work!</strong></p>
+                </div>
+                <div class="promotion-item">
+                    <img src="Anagha Images/Benefit 3.png" alt="Refill-based System" onclick="openModal(this)">
+                    <p><b>Reduce Plastic Waste:</b> <strong>With our refill-based model, you save money and the planet. No more single-use plastic bottles!</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <img id="modalImg" src="">
+            <button class="close-btn" onclick="closeModal()">Go Back</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Anagha Cleaners. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Open Modal
+        function openModal(image) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'flex'; // Show modal
+            modalImg.src = image.src; // Set modal image to clicked image
+        }
+
+        // Close Modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none'; // Hide modal
+        }
+
+        // Close Modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
