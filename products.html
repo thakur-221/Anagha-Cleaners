@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Anagha Cleaners</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            text-align: center;
+            width: 45%;
+            margin: 20px 0;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+            /* Adds a hover effect */
+        }
+
+        .product p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Background overlay */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .popup .go-back {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .popup .go-back:hover {
+            background-color: #45a049;
+        }
+
+        .enlarge-note {
+            color: #888;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+            #product1{
+                font-size: 20px;
+            }
+            #product1 h1{
+                font-size: 1.23em;
+            }
+            #product1 p{
+                font-size: 0.89em;
+                text-align: justify;
+                margin: 2% 0;
+            }
+            footer p{
+                color: white;
+                text-align: center;
+                padding: 2%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Anagha Cleaners</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <div id="product1">
+                <h1><b>Our Products At Anagha Cleaners </b></h1>
+                <p>we take pride in offering cleaning
+                    solutions that not only provide exceptional cleanliness but also leave behind a refreshing,
+                    natural fragrance.<br> Our products are crafted from eco-friendly ingredients like neem,
+                    coconut surfactants, and citric peel extracts, ensuring powerful germ-killing action
+                    without the use of harsh chemicals. Whether it's your floors, toilets, or hands, our
+                    cleaners remove dirt and bacteria effectively while being gentle on surfaces and safe for
+                    the environment. Plus, the pleasant, long-lasting aromas of eucalyptus, citrus, and natural
+                    oils make every clean feel revitalizing. Clean with care, and experience nature’s touch!
+                </p>
+
+
+            </div>
+
+            <div class="product">
+                <img src="Anagha Images/Handwash.png" alt="Handwash" onclick="openPopup('Anagha Images/Handwash.png')">
+                <p><strong>Handwash - Rs 400</strong></p>
+                <h3>Soft on hands, tough on germs! Made with natural neem and coconut surfactant to keep your hands
+                    fresh and protected, naturally.</h3>
+                <p class="enlarge-note">Click to enlarge</p>
+            </div>
+
+            <div class="product">
+                <img src="Anagha Images/Floor Cleaner.png" alt="Floor Cleaner"
+                    onclick="openPopup('Anagha Images/Floor Cleaner.png')">
+                <p><strong>Floor Cleaner - Rs 200</strong></p>
+                <h3>For spotless, germ-free floors, Anagha Floor Cleaner uses the power of citric peel extracts and
+                    reetha to make your surfaces shine.</h3>
+                <p class="enlarge-note">Click to enlarge</p>
+            </div>
+
+            <div class="product">
+                <img src="Anagha Images/Phenyl.png" alt="Phenyl" onclick="openPopup('Anagha Images/Phenyl.png')">
+                <p><strong>Phenyl - Rs 300</strong></p>
+                <h3>Power-packed with natural disinfectants like neem and eucalyptus, Anagha Phenyl fights germs while
+                    leaving a refreshing fragrance.</h3>
+                <p class="enlarge-note">Click to enlarge</p>
+            </div>
+
+            <div class="product">
+                <img src="Anagha Images/Toilet Cleaner.png" alt="Toilet Cleaner"
+                    onclick="openPopup('Anagha Images/Toilet Cleaner.png')">
+                <p><strong>Toilet Cleaner - Rs 350</strong></p>
+                <h3>Tough on stains and bacteria, but safe for the environment. Our toilet cleaner combines citric acid
+                    and neem for a sparkling clean toilet.</h3>
+                <p class="enlarge-note">Click to enlarge</p>
+            </div>
+        </section>
+
+        <!-- Popup overlay -->
+        <div id="popup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-img" src="" alt="Product Image">
+            <button class="go-back" onclick="closePopup()">Go Back</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Anagha Cleaners. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPopup(imageSrc) {
+            var popup = document.getElementById("popup");
+            var popupImg = document.getElementById("popup-img");
+            popupImg.src = imageSrc;
+            popup.style.display = "flex";
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
