@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anagha Cleaners offers eco-friendly cleaning products, including handwash, floor cleaner, phenyl, and toilet cleaner. Made with natural ingredients like neem and citric peel extract.">
     <title>Products - Anagha Cleaners</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -64,13 +65,31 @@
 
         .product img:hover {
             transform: scale(1.05);
-            /* Adds a hover effect */
         }
 
         .product p {
             margin-top: 10px;
             font-size: 16px;
             color: #333;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            text-align: center;
+            padding: 10px;
+            color: white;
         }
 
         /* Popup styles */
@@ -83,7 +102,6 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            /* Background overlay */
             justify-content: center;
             align-items: center;
         }
@@ -124,27 +142,46 @@
             margin-top: 5px;
         }
 
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
         @media (max-width: 768px) {
             .product {
                 width: 100%;
             }
-            #product1{
+
+            #product1 {
                 font-size: 20px;
             }
-            #product1 h1{
+
+            #product1 h1 {
                 font-size: 1.23em;
             }
-            #product1 p{
+
+            #product1 p {
                 font-size: 0.89em;
                 text-align: justify;
                 margin: 2% 0;
             }
-            footer p{
+
+            footer p {
                 color: white;
                 text-align: center;
                 padding: 2%;
             }
-            
         }
     </style>
 </head>
@@ -165,52 +202,41 @@
     <main>
         <section id="products">
             <div id="product1">
-                <h1><b>Our Products At Anagha Cleaners </b></h1>
-                <p>we take pride in offering cleaning
-                    solutions that not only provide exceptional cleanliness but also leave behind a refreshing,
-                    natural fragrance.<br> Our products are crafted from eco-friendly ingredients like neem,
-                    coconut surfactants, and citric peel extracts, ensuring powerful germ-killing action
-                    without the use of harsh chemicals. Whether it's your floors, toilets, or hands, our
-                    cleaners remove dirt and bacteria effectively while being gentle on surfaces and safe for
-                    the environment. Plus, the pleasant, long-lasting aromas of eucalyptus, citrus, and natural
-                    oils make every clean feel revitalizing. Clean with care, and experience nature’s touch!
+                <h1><b>Our Products At Anagha Cleaners</b></h1>
+                <p>We take pride in offering cleaning solutions that not only provide exceptional cleanliness but also leave behind a refreshing, natural fragrance.<br> Our products are crafted from eco-friendly ingredients like neem, coconut surfactants, and citric peel extracts, ensuring powerful germ-killing action without the use of harsh chemicals. Whether it's your floors, toilets, or hands, our cleaners remove dirt and bacteria effectively while being gentle on surfaces and safe for the environment. Plus, the pleasant, long-lasting aromas of eucalyptus, citrus, and natural oils make every clean feel revitalizing. Clean with care, and experience nature’s touch!
                 </p>
-
-
             </div>
 
             <div class="product">
-                <img src="Anagha Images/Handwash.png" alt="Handwash" onclick="openPopup('Anagha Images/Handwash.png')">
-                <p><strong>Handwash - Rs 400</strong></p>
-                <h3>Soft on hands, tough on germs! Made with natural neem and coconut surfactant to keep your hands
-                    fresh and protected, naturally.</h3>
+                <img src="Anagha Images/Handwash.png" alt="Natural Handwash with Neem Extract" onclick="openPopup('Anagha Images/Handwash.png')">
+                <p><strong>Handwash</strong> - <span class="product-price">Rs 400</span></p>
+                <h3>Soft on hands, tough on germs! Made with natural neem and coconut surfactant to keep your hands fresh and protected, naturally.</h3>
                 <p class="enlarge-note">Click to enlarge</p>
+                <button class="cta-button">Buy Now</button>
             </div>
 
             <div class="product">
-                <img src="Anagha Images/Floor Cleaner.png" alt="Floor Cleaner"
-                    onclick="openPopup('Anagha Images/Floor Cleaner.png')">
-                <p><strong>Floor Cleaner - Rs 300</strong></p>
-                <h3>For spotless, germ-free floors, Anagha Floor Cleaner uses the power of citric peel extracts and
-                    reetha to make your surfaces shine.</h3>
+                <img src="Anagha Images/Floor Cleaner.png" alt="Eco-friendly Floor Cleaner with Citric Peel" onclick="openPopup('Anagha Images/Floor Cleaner.png')">
+                <p><strong>Floor Cleaner</strong> - <span class="product-price">Rs 300</span></p>
+                <h3>For spotless, germ-free floors, Anagha Floor Cleaner uses the power of citric peel extracts and reetha to make your surfaces shine.</h3>
                 <p class="enlarge-note">Click to enlarge</p>
+                <button class="cta-button">Buy Now</button>
             </div>
 
             <div class="product">
-                <img src="Anagha Images/Phenyl.png" alt="Phenyl" onclick="openPopup('Anagha Images/Phenyl.png')">
-                <p><strong>Phenyl - Rs 200</strong></p>
-                <h3>Power-packed with natural disinfectants like neem and eucalyptus, Anagha Phenyl fights germs while
-                    leaving a refreshing fragrance.</h3>
+                <img src="Anagha Images/Phenyl.png" alt="Neem and Eucalyptus Phenyl" onclick="openPopup('Anagha Images/Phenyl.png')">
+                <p><strong>Phenyl</strong> - <span class="product-price">Rs 200</span></p>
+                <h3>Power-packed with natural disinfectants like neem and eucalyptus, Anagha Phenyl fights germs while leaving a refreshing fragrance.</h3>
                 <p class="enlarge-note">Click to enlarge</p>
+                <button class="cta-button">Buy Now</button>
             </div>
 
             <div class="product">
-                <img src="Anagha Images/Toilet Cleaner.png" alt="Toilet Cleaner"
-                    onclick="openPopup('Anagha Images/Toilet Cleaner.png')">
-                <p><strong>Toilet Cleaner - Rs 350</strong></p>
-                <h3>Tough on stains and bacteria, but safe for the environment. Our toilet cleaner combines citric acid
-                    and neem for a sparkling clean toilet.</h3>
+                <img src="Anagha Images/Toilet Cleaner.png" alt="Natural Toilet Cleaner with Citric Acid and Neem" onclick="openPopup('Anagha Images/Toilet Cleaner.png')">
+                <p><strong>Toilet Cleaner</strong> - <span class="product-price">Rs 350</span></p>
+                <h3>Tough on stains and bacteria, but safe for the environment. Our toilet cleaner combines citric acid and neem for a sparkling clean toilet.</h3>
                 <p class="enlarge-note">Click to enlarge</p>
+                <button class="cta-button">Buy Now</button>
             </div>
         </section>
 
@@ -223,7 +249,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Anagha Cleaners. All rights reserved.</p>
+        <p>&copy; 2024 Anagha Cleaners. All rights reserved.</p>
     </footer>
 
     <script>

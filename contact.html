@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Anagha Cleaners for eco-friendly cleaning products. Reach out via email or phone, or visit us in Uttarakhand, India.">
     <title>Contact - Anagha Cleaners</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -42,12 +43,26 @@
             text-align: center;
         }
 
-        #contact h1 {
-            color: #333;
+        #detail {
+            color: white; /* Ensures all text in the contact section is white */
         }
 
-        #contact h2 {
-            color: #555;
+        #detail h1 {
+            color: white;
+        }
+
+        #detail h2 {
+            color: white;
+        }
+
+        #detail a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Specifically change the email link color to blue */
+        #detail a[href^="mailto"] {
+            color: blue;
         }
 
         /* Contact Form Styles */
@@ -96,9 +111,15 @@
             border-radius: 8px;
         }
 
+        footer {
+            background-color: #4CAF50;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-
             header,
             main,
             footer {
@@ -109,7 +130,8 @@
             .contact-form {
                 padding: 15px;
             }
-            nav ul{
+
+            nav ul {
                 display: flex;
                 justify-content: center;
                 margin-top: 3%;
@@ -121,22 +143,20 @@
             }
 
             #detail {
-                font-size: 10px;
+                font-size: 12px;
                 margin: 4%;
-
             }
 
-            #detail>h1 {
-                font-size: 1em;
+            #detail h1 {
+                font-size: 1.2em;
             }
 
-            #detail>h2 {
+            #detail h2 {
                 font-size: 1em;
             }
         }
 
         @media (max-width: 480px) {
-
             h1,
             h2 {
                 font-size: 1.5rem;
@@ -177,19 +197,19 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="contact">
             <div id="detail">
                 <h1>Contact Us</h1>
-                <h2>Email: contact@anaghacleaner.com</h2>
-                <h2>Contact Person:1-> +91 7209062480 </h2>
-                <h2>Contact Person:2-> +91 9557333642 </h2>
+                <h2>Email: <a href="mailto:contact@anaghacleaner.com">contact@anaghacleaner.com</a></h2>
+                <h2>Phone 1: <a href="tel:+917209062480">+91 7209062480</a></h2>
+                <h2>Phone 2: <a href="tel:+919557333642">+91 9557333642</a></h2>
                 <h2>Address: Roorkee Road near Mandawar, Uttarakhand, India</h2>
             </div>
 
-
             <div class="image-container">
-                <img src="Anagha Images/Benefit 4.png" alt="To Save Mother Earth">
+                <img src="Anagha Images/Benefit 4.png" alt="Anagha Cleaners - Eco-Friendly Initiative to Save Mother Earth">
             </div>
 
             <div class="contact-form">
@@ -211,14 +231,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Anagha Cleaners. All rights reserved.</p>
+        <p>&copy; 2024 Anagha Cleaners. All rights reserved.</p>
     </footer>
 
     <script>
         // JavaScript for popup message after form submission
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent actual form submission
-            alert("Thank you for contacting us!");
+            alert("Thank you for contacting us! We'll get back to you soon.");
         });
     </script>
 </body>
