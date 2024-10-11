@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 
 <head>
@@ -92,61 +92,27 @@
             width: 100%;
         }
 
-        /* Modal Style */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            position: relative;
-            background-color: #fff;
-            padding: 20px;
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .modal img {
-            max-width: 100%;
-            max-height: 80vh;
-            height: auto;
-        }
-
-        .close-btn {
-            position: relative;
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            font-size: 18px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .close-btn:hover {
-            background-color: darkred;
-        }
-
         footer p {
             height: 50px;
             color: white;
             text-align: center;
             padding: 4%;
+        }
+
+        /* New style for video to ensure it displays properly */
+        #video-section {
+            text-align: center;
+            z-index: 100; /* Ensures video is on top */
+            position: relative;
+            padding: 20px;
+        }
+
+        #video-section video {
+            z-index: 101; /* Set the video on a higher layer */
+            position: relative;
+            background-color: black; /* Background for visibility */
+            border: 2px solid white;
+            border-radius: 10px;
         }
 
         /* Responsive Design */
@@ -231,14 +197,23 @@
                     <p><b>Did You Know?</b> <strong>Regular cleaners release harmful VOCs like ammonia and sulfur that stay in your home, causing skin and lung issues.</strong></p>
                 </div>
                 <div class="promotion-item">
-                    <img src="Anagha Images/Benefit 2.png" alt="Eco-friendly Ingredients" onclick="openModal(this)">
+                    <img src="c:\Users\sumit\Documents\GitHub\Anagha-Cleaners\Anagha Images\IMG-20240713-WA0022.jpg" width="10px" height="10px"  alt="New Eco-Friendly Solution" onclick="openModal(this)">
                     <p><b>Eco-Friendly Solution:</b> <strong>Anagha Cleaners are made from citric peel extract, neem, and coconut surfactants. No toxic chemicals—just nature at work!</strong></p>
                 </div>
                 <div class="promotion-item">
-                    <img src="Anagha Images/Benefit 3.png" alt="Refill-based System" onclick="openModal(this)">
+                    <img src="c:\Users\sumit\Documents\GitHub\Anagha-Cleaners\Anagha Images\Benefit 2.png" alt="Refill-based System" onclick="openModal(this)">
                     <p><b>Reduce Plastic Waste:</b> <strong>With our refill-based model, you save money and the planet. No more single-use plastic bottles!</strong></p>
                 </div>
             </div>
+        </section>
+
+        <!-- Adding a video section with z-index and visibility improvements -->
+        <section id="video-section">
+            <h2>Watch Our Eco-friendly Cleaning in Action</h2>
+            <video width="480px" height="480px" controls>
+                <source src="c:\Users\sumit\Documents\GitHub\Anagha-Cleaners\Anagha Images\85698.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
     </main>
 
